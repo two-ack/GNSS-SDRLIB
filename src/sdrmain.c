@@ -350,3 +350,10 @@ extern void *sdrthread(void *arg)
 
     return THRETVAL;
 }
+
+/* Fix Error LNK2019: unresolved external symbol ___iob_func referenced in function */
+FILE _iob[] = { *stdin, *stdout, *stderr };
+extern "C" FILE* __cdecl __iob_func(void)
+{
+	return _iob;
+}
