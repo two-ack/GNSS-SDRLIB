@@ -125,6 +125,9 @@ public:
     bool chk_TYPE_SAIF;
     bool chk_TYPE_LEX;
     bool chk_Q01;
+    bool chk_Q02;
+    bool chk_Q03;
+    bool chk_Q04;
 
     /* SBAS */
     bool rb_S_FE1;

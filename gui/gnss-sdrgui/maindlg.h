@@ -97,6 +97,9 @@ namespace gnsssdrgui {
 
 
     public: System::Windows::Forms::CheckBox^  chk_Q01;
+    public: System::Windows::Forms::CheckBox^  chk_Q02;
+    public: System::Windows::Forms::CheckBox^  chk_Q03;
+    public: System::Windows::Forms::CheckBox^  chk_Q04;
     public: System::Windows::Forms::CheckBox^  chk_TYPE_L1CAQZS;
 
     public: System::Windows::Forms::Button^  b_start;
@@ -460,6 +463,9 @@ namespace gnsssdrgui {
             this->rb_Q_FE1 = (gcnew System::Windows::Forms::RadioButton());
             this->chk_TYPE_SAIF = (gcnew System::Windows::Forms::CheckBox());
             this->chk_TYPE_LEX = (gcnew System::Windows::Forms::CheckBox());
+            this->chk_Q04 = (gcnew System::Windows::Forms::CheckBox());
+            this->chk_Q03 = (gcnew System::Windows::Forms::CheckBox());
+            this->chk_Q02 = (gcnew System::Windows::Forms::CheckBox());
             this->chk_Q01 = (gcnew System::Windows::Forms::CheckBox());
             this->chk_TYPE_L1CAQZS = (gcnew System::Windows::Forms::CheckBox());
             this->b_start = (gcnew System::Windows::Forms::Button());
@@ -1731,12 +1737,15 @@ namespace gnsssdrgui {
             this->gb_qzs->Controls->Add(this->rb_Q_FE1);
             this->gb_qzs->Controls->Add(this->chk_TYPE_SAIF);
             this->gb_qzs->Controls->Add(this->chk_TYPE_LEX);
+            this->gb_qzs->Controls->Add(this->chk_Q04);
+            this->gb_qzs->Controls->Add(this->chk_Q03);
+            this->gb_qzs->Controls->Add(this->chk_Q02);
             this->gb_qzs->Controls->Add(this->chk_Q01);
             this->gb_qzs->Controls->Add(this->chk_TYPE_L1CAQZS);
             this->gb_qzs->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9, System::Drawing::FontStyle::Bold));
             this->gb_qzs->Location = System::Drawing::Point(428, 338);
             this->gb_qzs->Name = L"gb_qzs";
-            this->gb_qzs->Size = System::Drawing::Size(432, 39);
+            this->gb_qzs->Size = System::Drawing::Size(432, 80);
             this->gb_qzs->TabIndex = 26;
             this->gb_qzs->TabStop = false;
             this->gb_qzs->Text = L"QZSS";
@@ -1789,11 +1798,44 @@ namespace gnsssdrgui {
             this->chk_TYPE_LEX->UseVisualStyleBackColor = true;
             this->chk_TYPE_LEX->CheckedChanged += gcnew System::EventHandler(this, &maindlg::chk_TYPE_LEX_CheckedChanged);
             // 
+            // chk_Q04
+            // 
+            this->chk_Q04->AutoSize = true;
+            this->chk_Q04->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9));
+            this->chk_Q04->Location = System::Drawing::Point(136, 37);
+            this->chk_Q04->Name = L"chk_Q04";
+            this->chk_Q04->Size = System::Drawing::Size(44, 16);
+            this->chk_Q04->TabIndex = 24;
+            this->chk_Q04->Text = L"Q04";
+            this->chk_Q04->UseVisualStyleBackColor = true;
+            // 
+            // chk_Q03
+            // 
+            this->chk_Q03->AutoSize = true;
+            this->chk_Q03->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9));
+            this->chk_Q03->Location = System::Drawing::Point(94, 37);
+            this->chk_Q03->Name = L"chk_Q03";
+            this->chk_Q03->Size = System::Drawing::Size(44, 16);
+            this->chk_Q03->TabIndex = 24;
+            this->chk_Q03->Text = L"Q03";
+            this->chk_Q03->UseVisualStyleBackColor = true;
+            // 
+            // chk_Q02
+            // 
+            this->chk_Q02->AutoSize = true;
+            this->chk_Q02->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9));
+            this->chk_Q02->Location = System::Drawing::Point(52, 37);
+            this->chk_Q02->Name = L"chk_Q02";
+            this->chk_Q02->Size = System::Drawing::Size(44, 16);
+            this->chk_Q02->TabIndex = 24;
+            this->chk_Q02->Text = L"Q02";
+            this->chk_Q02->UseVisualStyleBackColor = true;
+            // 
             // chk_Q01
             // 
             this->chk_Q01->AutoSize = true;
             this->chk_Q01->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9));
-            this->chk_Q01->Location = System::Drawing::Point(346, 17);
+            this->chk_Q01->Location = System::Drawing::Point(10, 37);
             this->chk_Q01->Name = L"chk_Q01";
             this->chk_Q01->Size = System::Drawing::Size(44, 16);
             this->chk_Q01->TabIndex = 24;
@@ -2500,7 +2542,7 @@ namespace gnsssdrgui {
             this->gb_sbs->Controls->Add(this->chk_TYPE_SBASL1);
             this->gb_sbs->Controls->Add(this->chk_SALL);
             this->gb_sbs->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 9, System::Drawing::FontStyle::Bold));
-            this->gb_sbs->Location = System::Drawing::Point(428, 378);
+            this->gb_sbs->Location = System::Drawing::Point(428, 400);
             this->gb_sbs->Name = L"gb_sbs";
             this->gb_sbs->Size = System::Drawing::Size(432, 77);
             this->gb_sbs->TabIndex = 61;
@@ -2848,7 +2890,7 @@ namespace gnsssdrgui {
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->ClientSize = System::Drawing::Size(865, 460);
+            this->ClientSize = System::Drawing::Size(900, 480);
             this->Controls->Add(this->gb_misc);
             this->Controls->Add(this->gb_sbs);
             this->Controls->Add(this->gb_bds);
@@ -3786,6 +3828,9 @@ namespace gnsssdrgui {
                 chk_TYPE_SAIF->Checked=config->chk_TYPE_SAIF;
                 chk_TYPE_LEX->Checked=config->chk_TYPE_LEX;
                 chk_Q01->Checked=config->chk_Q01;
+            	chk_Q02->Checked=config->chk_Q02;
+            	chk_Q03->Checked=config->chk_Q03;
+            	chk_Q04->Checked=config->chk_Q04;
 
                 /* SBAS */
                 rb_S_FE1->Checked=config->rb_S_FE1;
@@ -3936,6 +3981,9 @@ namespace gnsssdrgui {
                 config->chk_TYPE_SAIF=chk_TYPE_SAIF->Checked;
                 config->chk_TYPE_LEX=chk_TYPE_LEX->Checked;
                 config->chk_Q01=chk_Q01->Checked;
+            	config->chk_Q02=chk_Q02->Checked;
+            	config->chk_Q03=chk_Q03->Checked;
+            	config->chk_Q04=chk_Q04->Checked;
 
                 /* SBAS */
                 config->rb_S_FE1=rb_S_FE1->Checked;
@@ -4111,6 +4159,9 @@ namespace gnsssdrgui {
                      chk_TYPE_SAIF->Checked=false;
                      chk_TYPE_L1CAQZS->Checked=false;
                      chk_Q01->Checked=true;
+            		 chk_Q02->Checked=true;
+            		 chk_Q03->Checked=true;
+            		 chk_Q04->Checked=true;
                      rb_Q_FE2->Checked=true;
                      chk_TYPE_SAIF->Enabled=false;
                      chk_TYPE_L1CAQZS->Enabled=false;
@@ -4125,6 +4176,9 @@ namespace gnsssdrgui {
                      chk_TYPE_LEX->Checked=false;
                      chk_TYPE_L1CAQZS->Checked=false;
                      chk_Q01->Checked=true;
+            		 chk_Q02->Checked=true;
+            		 chk_Q03->Checked=true;
+            		 chk_Q04->Checked=true;
                      rb_Q_FE1->Checked=true;
                      chk_TYPE_LEX->Enabled=false;
                      chk_TYPE_L1CAQZS->Enabled=false;

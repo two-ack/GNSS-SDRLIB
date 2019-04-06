@@ -144,6 +144,15 @@ System::Void SDR::start(System::Object^ obj)
     setsdrini(form->chk_Q01->Checked,193,SYS_QZS,form->rb_Q_FE2->Checked,form->chk_TYPE_L1CAQZS->Checked,false,false,&sdrini);
     setsdrini(form->chk_Q01->Checked,183,SYS_QZS,form->rb_Q_FE2->Checked,false,form->chk_TYPE_SAIF->Checked,false,&sdrini);
     setsdrini(form->chk_Q01->Checked,193,SYS_QZS,form->rb_Q_FE2->Checked,false,false,form->chk_TYPE_LEX->Checked,&sdrini);
+    setsdrini(form->chk_Q02->Checked,194,SYS_QZS,form->rb_Q_FE2->Checked,form->chk_TYPE_L1CAQZS->Checked,false,false,&sdrini);
+    setsdrini(form->chk_Q02->Checked,183,SYS_QZS,form->rb_Q_FE2->Checked,false,form->chk_TYPE_SAIF->Checked,false,&sdrini);
+    setsdrini(form->chk_Q02->Checked,194,SYS_QZS,form->rb_Q_FE2->Checked,false,false,form->chk_TYPE_LEX->Checked,&sdrini);
+    setsdrini(form->chk_Q03->Checked,199,SYS_QZS,form->rb_Q_FE2->Checked,form->chk_TYPE_L1CAQZS->Checked,false,false,&sdrini);
+    setsdrini(form->chk_Q03->Checked,183,SYS_QZS,form->rb_Q_FE2->Checked,false,form->chk_TYPE_SAIF->Checked,false,&sdrini);
+    setsdrini(form->chk_Q03->Checked,199,SYS_QZS,form->rb_Q_FE2->Checked,false,false,form->chk_TYPE_LEX->Checked,&sdrini);
+	setsdrini(form->chk_Q04->Checked,195,SYS_QZS,form->rb_Q_FE2->Checked,form->chk_TYPE_L1CAQZS->Checked,false,false,&sdrini);
+	setsdrini(form->chk_Q04->Checked,183,SYS_QZS,form->rb_Q_FE2->Checked,false,form->chk_TYPE_SAIF->Checked,false,&sdrini);
+	setsdrini(form->chk_Q04->Checked,195,SYS_QZS,form->rb_Q_FE2->Checked,false,false,form->chk_TYPE_LEX->Checked,&sdrini);
 
     /* channel setting */ /* SBAS */
     setsdrini(form->chk_S120->Checked,120,SYS_SBS,form->rb_S_FE2->Checked,true,form->chk_TYPE_SBASL1->Checked,false,&sdrini);
