@@ -61,14 +61,6 @@ extern unsigned long tickgetus(void)
 #endif
 #endif
 }
-/* calculation log2(x) ---------------------------------------------------------
-* args   : double x         I   x data
-* return : double               log2(x)
-*-----------------------------------------------------------------------------*/
-extern double log2(double x)  
-{  
-    return log(x)/log(2.0);  
-}
 /* calculation FFT number of points (2^bits samples) ---------------------------
 * calculation FFT number of points (round up)
 * args   : double x         I   number of points (not 2^bits samples)
